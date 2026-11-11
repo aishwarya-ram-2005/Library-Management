@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block content %}<div class="form-card card shadow-sm"><div class="card-body p-4"><h2>Issue a book</h2><p class="text-muted">The standard borrowing period is 14 days.</p>
+<form method="post">{% csrf_token %}<div class="mb-3"><label class="form-label">Book</label><select class="form-select" name="book" required><option value="">Select a book</option>{% for book in books %}<option value="{{ book.pk }}">{{ book.title }} — {{ book.author }} ({{ book.available_copies }} available)</option>{% endfor %}</select></div>
+<div class="mb-3"><label class="form-label">Member</label><select class="form-select" name="member" required><option value="">Select a member</option>{% for member in members %}<option value="{{ member.pk }}">{{ member.name }} — {{ member.student_id }}</option>{% endfor %}</select></div>
+<button class="btn btn-primary">Issue book</button></form></div></div>{% endblock %}

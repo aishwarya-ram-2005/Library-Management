@@ -1,0 +1,16 @@
+body { background: #f5f7fb; color: #202938; }
+.navbar-brand { letter-spacing: .3px; }
+h1 { font-weight: 700; font-size: 1.8rem; }
+.card { border: 0; border-radius: 14px; box-shadow: 0 4px 18px rgba(25,45,80,.06); }
+.table { vertical-align: middle; }
+.table thead th { background: #f0f4fa; color: #46536a; font-size: .9rem; }
+.stat-card { height: 100%; padding: 20px; background: white; border-radius: 14px; box-shadow: 0 4px 18px rgba(25,45,80,.06); }
+.stat-card span { display:block; color:#667085; font-size:.9rem; }
+.stat-card strong { display:block; margin-top:8px; font-size:2rem; color:#155eef; }
+.auth-card, .form-card { max-width: 620px; margin: 35px auto; }
+.auth-card { max-width: 440px; }
+form p { margin-bottom: 1rem; }
+form p label { display:block; font-weight:600; margin-bottom:5px; }
+form p input, form p select, form p textarea { width:100%; padding:9px 11px; border:1px solid #ced4da; border-radius:7px; }
+.helptext { display:block; color:#6c757d; font-size:.82rem; }
+.errorlist { color:#b42318; }

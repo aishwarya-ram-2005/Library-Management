@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block title %}Members{% endblock %}{% block content %}
+<div class="d-flex justify-content-between mb-3"><h1>Members</h1><a class="btn btn-primary" href="{% url 'member_create' %}">Add member</a></div>
+<form class="input-group mb-3"><input class="form-control" name="q" value="{{ q }}" placeholder="Search name, student ID, email or phone"><button class="btn btn-outline-primary">Search</button></form>
+<div class="card"><div class="table-responsive"><table class="table mb-0"><thead><tr><th>Name</th><th>Student ID</th><th>Email</th><th>Phone</th><th>Actions</th></tr></thead><tbody>
+{% for member in members %}<tr><td>{{ member.name }}</td><td>{{ member.student_id }}</td><td>{{ member.email }}</td><td>{{ member.phone }}</td><td><a href="{% url 'member_update' member.pk %}">Edit</a> · <a href="{% url 'member_delete' member.pk %}">Delete</a></td></tr>
+{% empty %}<tr><td colspan="5" class="p-4 text-center">No members found.</td></tr>{% endfor %}</tbody></table></div></div>{% endblock %}
